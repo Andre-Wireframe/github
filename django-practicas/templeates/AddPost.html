@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddPost</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="navbar">
+
+            <a href="{% url 'hola' %}">Inicio</a>
+            <a href="{% url 'AddPost' %}">Agregar Publicacion</a>
+            <a href="{% url 'AddComment' %}">Agregar Comentario</a>
+
+        </div>
+
+        <div>
+
+            <h1>Agregar un Post</h1>
+
+        </div>
+
+    </header>
+
+    <div class="FormContainer">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

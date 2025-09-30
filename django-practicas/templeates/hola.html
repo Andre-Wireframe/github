@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola mundo</title>
 </head>
 <body>
-    <h1>Hola mundo soy andre</h1>
+    
+    <header>
+
+        <div class="navbar">
+
+            <a href="{% url 'hola' %}">Inicio</a>
+            <a href="{% url 'AddPost' %}">Agregar un post</a>
+            <a href="{% url 'AddComment' %}">Agrgar un Comentario</a>
+
+        </div>
+
+    </header>
+
 </body>
 </html>
